@@ -1,0 +1,33 @@
+schema {
+    query: Query
+}
+
+type Person {
+    id: ID!
+    email: String!
+    name: String!
+    address: Address!
+}
+
+enum AuStatesEnum {
+    ACT,
+    NSW,
+    NT,
+    QLD,
+    SA,
+    TAS,
+    VIC,
+    WA
+}
+
+type Address {
+    id: ID!
+    number: Int!
+    street: String!
+    city: String!
+    state: AuStatesEnum!
+}
+
+type Query {
+    person: Person!
+}
